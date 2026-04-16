@@ -5,7 +5,7 @@ LOGFILE = "logs/healthcheck.log"
 mkdir -p logs
 
 while true; do
-TIMESTAMP= $(date "+%Y-%m-%d %H)
+TIMESTAMP= $(date "+%Y-%m-%d %H")
 RESPONSE =$(curl -s $ENDPOINT)
 if [[ $RESPONSE == *"healthy"*]];
 then echo "[$TIMESTAMP] SUCCESS: HEALTHY>> $LOGFILE
